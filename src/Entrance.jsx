@@ -53,19 +53,19 @@ function getstyle(node, dir, enter) {
 
     if (dir === 1) {
         x = offset.left - 85;
-        y = offset.top - 30;
+        y = offset.top - 25;
         bg = `arrow${dir}`;
     } else if (dir === 0) {
-        x = offset.left - 30;
-        y = offset.top + 30;
+        x = offset.left - 25;
+        y = offset.top + 35;
         bg = `arrow${dir}`;
     } else if (dir === 2) {
-        x = offset.left - 30;
+        x = offset.left - 25;
         y = offset.top - 85;
         bg = `arrow${dir}`;
     } else if (dir === 3) {
-        x = offset.left + 30;
-        y = offset.top - 30;
+        x = offset.left + 35;
+        y = offset.top - 25;
         bg = `arrow${dir}`;
     }
 

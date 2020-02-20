@@ -13,13 +13,13 @@
 .datas {
     border: 2px solid darkolivegreen;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    /* width: 60%; */
-    padding: 5px;
-    margin: 10px;
     border-radius: 10px;
+    margin: 30px;
+    /* flex-basis: 0;
+    flex-grow: 1; */
 }
 
 .firstRow {
@@ -30,6 +30,7 @@
 
 body {
     background-color: #edf5e1;
+    overflow: hidden;
 }
 
 img {
@@ -39,6 +40,8 @@ img {
 }
 
 .containerr {
+    width: 99.5vw;
+    /* margin-top: 10px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,6 +54,9 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* position: absolute; */
+    right: 10px;
+    top: 100px;
 }
 
 .plot-container>div {
@@ -63,7 +69,71 @@ img {
 }
 
 #dropdown {
-    position: relative;
-    margin-top: 50px;
-    display: none;
+    position: absolute;
+    margin-top: 40px;
+    left: 85px;
+}
+
+.maincontent {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    width: 100%;
+}
+
+.footer {
+    height: 100px;
+}
+
+.description {}
+
+.simulation {
+    margin: 0px 6vw 0px 6vw;
+
+    /* flex-basis: 0;
+    flex-grow: 1; */
+}
+
+.button {
+    background-color: #fc821e;
+    border: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    text-decoration: none;
+    margin: 7vw 2vw 20px 3vw;
+    border-radius: 100%;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    animation: shadow-pulse 2s infinite;
+}
+
+.button:hover {
+    background-color: #ff7300;
+}
+
+@keyframes shadow-pulse {
+    0% {
+        box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+    }
+
+    100% {
+        box-shadow: 0 0 0 25px rgba(0, 0, 0, 0);
+    }
+}
+
+.dropdown .btn {
+    background: #274455;
+    color: #fff;
+}
+
+.dropdown .btn:hover {
+    background: #3d6379;
+    color: #fff;
 }

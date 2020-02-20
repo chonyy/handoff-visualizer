@@ -136,25 +136,77 @@ export default class Parent extends Component {
         let grid = this.state.grid;
         return (
             <div className="containerr">
-                <button onClick={() => this.handleClick()}>click me</button>
                 <div className="board">
                     {grid.map(row => {
                         return (
-                            <div key={uuidv4()} className="roww">
-                                {row.map(node => {
-                                    return (
-                                        <Child
-                                            key={uuidv4()}
-                                            row={node.row}
-                                            col={node.col}
-                                            visiting={node.visiting}
-                                            path={node.path}
-                                            bs={node.bs}
-                                            power={node.power}
-                                            handoff={node.handoff}
-                                        ></Child>
-                                    );
-                                })}
+                            <div className="containerr">
+                                {/* <div className="firstRow"> */}
+
+                                <div className="maincontent">
+                                    {/* </div> */}
+                                    <div className="description">
+                                        <div
+                                            className="button"
+                                            onClick={() => this.handleClick()}
+                                        >
+                                            <div>Visualize</div>
+                                        </div>
+                                    </div>
+                                    <div className="simulation">
+                                        <div className="board">
+                                            {grid.map(row => {
+                                                return (
+                                                    <div
+                                                        key={uuidv4()}
+                                                        className="roww"
+                                                    >
+                                                        {row.map(node => {
+                                                            // console.log(node);
+                                                            return (
+                                                                <Child
+                                                                    key={uuidv4()}
+                                                                    row={
+                                                                        node.row
+                                                                    }
+                                                                    col={
+                                                                        node.col
+                                                                    }
+                                                                    visiting={
+                                                                        node.visiting
+                                                                    }
+                                                                    path={
+                                                                        node.path
+                                                                    }
+                                                                    bs={node.bs}
+                                                                    power={
+                                                                        node.power
+                                                                    }
+                                                                    handoff={
+                                                                        node.handoff
+                                                                    }
+                                                                ></Child>
+                                                            );
+                                                        })}
+                                                    </div>
+                                                );
+                                            })}
+                                        </div>
+                                    </div>
+                                    <div className="datas">
+                                        <Data
+                                            type={"cars"}
+                                            data={this.state.cars.length}
+                                        ></Data>
+                                        <Data
+                                            type={"handoffs"}
+                                            data={handoffs}
+                                        ></Data>
+                                        <Data
+                                            type={"power"}
+                                            data={averagepower}
+                                        ></Data>
+                                    </div>
+                                </div>
                             </div>
                         );
                     })}
@@ -194,66 +246,75 @@ export default class Parent extends Component {
 
         return (
             <div className="containerr">
-                <div className="firstRow">
-                    <button onClick={() => this.handleClick()}>click me</button>
+                <div className="maincontent">
+                    <div className="description">
+                        <div
+                            className="button"
+                            onClick={() => this.handleClick()}
+                        >
+                            <div>Visualize</div>
+                        </div>
+                    </div>
+                    <div className="simulation">
+                        <div className="board">
+                            {grid.map(row => {
+                                return (
+                                    <div key={uuidv4()} className="roww">
+                                        {row.map(node => {
+                                            // console.log(node);
+                                            return (
+                                                <Child
+                                                    key={uuidv4()}
+                                                    row={node.row}
+                                                    col={node.col}
+                                                    visiting={node.visiting}
+                                                    path={node.path}
+                                                    bs={node.bs}
+                                                    power={node.power}
+                                                    handoff={node.handoff}
+                                                ></Child>
+                                            );
+                                        })}
+                                    </div>
+                                );
+                            })}
+                        </div>
+                        <div>
+                            {cars.map(car => {
+                                return (
+                                    <Line
+                                        key={uuidv4()}
+                                        row={car.row}
+                                        col={car.col}
+                                        bs={car.bs}
+                                        handoff={car.handoff}
+                                    ></Line>
+                                );
+                            })}
+                        </div>
+                        <div>
+                            {entrances.map(e => {
+                                let entering = -1;
+                                if (e.carenter === 0) entering = 0;
+                                else if (e.carenter === 1) entering = 1;
+                                e.carenter = -1;
+                                return (
+                                    <Entrance
+                                        key={uuidv4()}
+                                        row={e.row}
+                                        col={e.col}
+                                        dir={e.arrowdir}
+                                        enter={entering}
+                                    ></Entrance>
+                                );
+                            })}
+                        </div>
+                    </div>
                     <div className="datas">
                         <Data type={"cars"} data={cars.length}></Data>
                         <Data type={"handoffs"} data={handoffs}></Data>
                         <Data type={"power"} data={averagepower}></Data>
                     </div>
-                </div>
-                <div className="board">
-                    {grid.map(row => {
-                        return (
-                            <div key={uuidv4()} className="roww">
-                                {row.map(node => {
-                                    // console.log(node);
-                                    return (
-                                        <Child
-                                            key={uuidv4()}
-                                            row={node.row}
-                                            col={node.col}
-                                            visiting={node.visiting}
-                                            path={node.path}
-                                            bs={node.bs}
-                                            power={node.power}
-                                            handoff={node.handoff}
-                                        ></Child>
-                                    );
-                                })}
-                            </div>
-                        );
-                    })}
-                </div>
-                <div>
-                    {cars.map(car => {
-                        return (
-                            <Line
-                                key={uuidv4()}
-                                row={car.row}
-                                col={car.col}
-                                bs={car.bs}
-                                handoff={car.handoff}
-                            ></Line>
-                        );
-                    })}
-                </div>
-                <div>
-                    {entrances.map(e => {
-                        let entering = -1;
-                        if (e.carenter === 0) entering = 0;
-                        else if (e.carenter === 1) entering = 1;
-                        e.carenter = -1;
-                        return (
-                            <Entrance
-                                key={uuidv4()}
-                                row={e.row}
-                                col={e.col}
-                                dir={e.arrowdir}
-                                enter={entering}
-                            ></Entrance>
-                        );
-                    })}
                 </div>
             </div>
         );

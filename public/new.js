@@ -3,4 +3,4 @@ function changemode(value) {
     button.innerHTML = value
 }
 
-changemode("Best Policy");
+// changemode("Best Policy");
