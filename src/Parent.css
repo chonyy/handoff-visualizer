@@ -1,0 +1,69 @@
+.board {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    background-color: #34314c;
+}
+
+.roww {
+    display: flex;
+    flex-direction: row;
+}
+
+.datas {
+    border: 2px solid darkolivegreen;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    /* width: 60%; */
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.firstRow {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+body {
+    background-color: #edf5e1;
+}
+
+img {
+    width: 80px;
+    height: 80px;
+    /* filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%); */
+}
+
+.containerr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.plot-container {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.plot-container>div {
+    margin: 10px;
+}
+
+#logo {
+    width: 35px;
+    height: 35px;
+}
+
+#dropdown {
+    position: relative;
+    margin-top: 50px;
+    display: none;
+}

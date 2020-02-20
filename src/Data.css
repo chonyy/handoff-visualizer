@@ -1,0 +1,21 @@
+.data {
+    padding: 0px 20px;
+    font-size: 30px;
+    border-radius: 25%;
+    text-align: center;
+}
+
+.word {
+    color: #274455;
+    font-size: 20px;
+}
+
+.cars {
+    color: #ffc400;
+}
+.handoffs {
+    color: #fc913a;
+}
+.power {
+    color: #ff4e50;
+}
