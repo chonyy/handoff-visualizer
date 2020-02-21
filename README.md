@@ -1,6 +1,10 @@
 <p align=center>
-    <img src="img/handoff.png">
+    <img src="img/handoff.PNG">
 </p>
+
+**still writing docs, please wait for one to two days**
+
+**still writing docs, please wait for one to two days**
 
 **still writing docs, please wait for one to two days**
 
