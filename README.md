@@ -35,6 +35,36 @@ if (Pnew < Pmin) {
 }
 ```
 
+## Simulation Structure
+
+<p align=center>
+    <img src="img/simulation structure.PNG">
+</p>
+Each block is a 120*80(m^2). Cars are assummed to be moving on the line between blocks that doesn't take any space.
+
+-   ⋋ = 1 cars/ min [ P(t) = ⋋"e" ^(−"⋋" ) (Hint: t is in sec) ]
+-   Velocity = 72km/hr
+
+### Car Entrance Distribution
+
+The probability of the entrance follows [Poisson distribution](https://en.wikipedia.org/wiki/Poisson_distribution)<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c22cb4461e100a6db5f815de1f44b1747f160048"> and <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2debd3f9adf97c8af4919aa69ed4a7121b47a737">
+
+In our simultation
+
+-   ⋋ = 0.0167 cars/ sec
+-   k = 1
+
+### Received Power
+
+The received power is calculated by the formula.
+
+-   Base station transmission Pt(mW) = -50 dBm
+-   Base = 1mW
+-   10log(Pt/Base) = dBm
+-   First-meter path loss = 10 dBm
+-   P0 = -50 dBm
+-   Pd = -60 - 20log(d(m)/1m)
+
 ## Demo Video
 
 <p align=center>
