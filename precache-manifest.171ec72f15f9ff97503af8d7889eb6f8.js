@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6b077dc41298871acf494fda475498ca",
+    "revision": "cf9e91a901a5225323dbf975ba07c8e4",
     "url": "/handoff-visualizer/index.html"
   },
   {
