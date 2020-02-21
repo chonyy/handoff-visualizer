@@ -70,18 +70,18 @@
     background-color: #ffc952;
 }
 
-.entrance {
+.entrancee {
     background-size: cover;
     background-image: url(arrow1.svg);
 }
 
-.entering {
+.enteringg {
     background-size: cover;
     background-image: url(arrow1.svg);
     filter: invert(44%) sepia(91%) saturate(3801%) hue-rotate(135deg) brightness(92%) contrast(102%);
 }
 
-.leaving {
+.leavingg {
     background-size: cover;
     background-image: url(arrow3.svg);
     filter: invert(18%) sepia(75%) saturate(1692%) hue-rotate(335deg) brightness(120%) contrast(98%);

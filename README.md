@@ -1,3 +1,9 @@
+<p align=center>
+    <img src="img/handoff.png">
+</p>
+
+**still writing docs, please wait for one to two days**
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

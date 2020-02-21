@@ -17,6 +17,7 @@ let handoffs = 0;
 let averagepower = -103;
 let carsnumlist = [];
 let cnt = 0;
+let running = 0;
 
 const bstation = [
     {
@@ -234,13 +235,13 @@ export default class Parent extends Component {
     }
 
     handleClick() {
-        // setInterval(() => {
-        //     let newcars = carmoving(this.state.cars);
-        //     let newgrid = move(this.state.cars);
-        //     this.setState({ grid: newgrid, cars: newcars });
-        // }, 10);
-        for (let i = 0; i < 60; i++) {
-            setTimeout(() => {
+        if (running === 1) {
+            running = 0;
+            clearInterval(window.intervalid);
+        } else {
+            running = 1;
+            window.intervalid = setInterval(() => {
+                console.log(running);
                 let newentrances = updateenter(
                     this.state.entrances,
                     this.state.cars
@@ -252,8 +253,37 @@ export default class Parent extends Component {
                     cars: newcars,
                     entrances: newentrances
                 });
-            }, 600 * i);
+            }, 600);
         }
+
+        // if (running === 1) running = 0;
+        // else running = 1;
+        // for (let i = 0; i < 60; i++) {
+        //     console.log(running);
+        //     if (running === 0) {
+        //         break;
+        //     } else {
+        //         setTimeout(() => {
+        //             if (running === 0) {
+        //                 break;
+        //             let newentrances = updateenter(
+        //                 this.state.entrances,
+        //                 this.state.cars
+        //             );
+        //             let newcars = carmoving(
+        //                 this.state.entrances,
+        //                 this.state.cars
+        //             );
+        //             let newgrid = move(this.state.cars);
+        //             this.setState({
+        //                 grid: newgrid,
+        //                 cars: newcars,
+        //                 entrances: newentrances
+        //             });
+        //         }, 600 * i);
+        //     }
+        // }
+        // running = 0;
     }
 
     render() {
