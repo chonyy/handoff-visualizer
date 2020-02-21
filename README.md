@@ -2,33 +2,46 @@
     <img src="img/handoff.PNG" width="636" height="391">
 </p>
 
-https://chonyy.github.io/handoff-visualizer/
+> 📶Wiresless network handoff simulator built with react.js!
+
+Play with it! https://chonyy.github.io/handoff-visualizer/
 
 ## Policies Pseudocode
 
-```javascript
-//Power referred to P, base station referered to B
-//Threshold referred to T, Entrophy referred to E
+Power referred to P, base station referered to B.
 
-// Best Policy
+Threshold referred to T, Entrophy referred to E.
+
+### Best Policy
+
+```javascript
 if (Pnew > Pold) {
     car.bs = Bnew;
     car.power = Pnew;
 }
+```
 
-//Threshold Policy
+### Threshold Policy
+
+```javascript
 if (Pnew > Pold && Pold < T) {
     car.bs = Bnew;
     car.power = Pnew;
 }
+```
 
-//Entrophy Policy
+### Entrophy Policy
+
+```javascript
 if (Pnew > Pold + E) {
     car.bs = Bnew;
     car.power = Pnew;
 }
+```
 
-//Minimum Policy
+### Minimum Policy
+
+```javascript
 if (Pnew < Pmin) {
     car.bs = Bnew;
     car.power = Pnew;
@@ -63,7 +76,7 @@ The received power is calculated by the formula.
 -   10log(Pt/Base) = dBm
 -   First-meter path loss = 10 dBm
 -   P0 = -50 dBm
--   Pd = -60 - 20log(d(m)/1m)
+-   Pd = -60 - 20log(d(m) / 1m)
 
 ## Demo Video
 
