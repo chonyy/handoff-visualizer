@@ -2,6 +2,8 @@
     <img src="img/handoff.PNG">
 </p>
 
+https://chonyy.github.io/handoff-visualizer/
+
 **still writing docs, please wait for one to two days**
 
 **still writing docs, please wait for one to two days**
