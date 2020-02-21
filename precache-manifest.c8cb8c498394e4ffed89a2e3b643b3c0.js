@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "276b6c1dc5cc5a68242d30bf629e777e",
+    "revision": "02ea56af195e79b0a0052201e3c150c0",
     "url": "/handoff-visualizer/index.html"
   },
   {
-    "revision": "d9d63d6dacff3392d164",
-    "url": "/handoff-visualizer/static/css/main.3f0c8a91.chunk.css"
+    "revision": "e5124496d26ddaac585d",
+    "url": "/handoff-visualizer/static/css/main.09789ac9.chunk.css"
   },
   {
     "revision": "393453fa1b6403c27074",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/handoff-visualizer/static/js/2.258da79f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d9d63d6dacff3392d164",
-    "url": "/handoff-visualizer/static/js/main.4d11fbba.chunk.js"
+    "revision": "e5124496d26ddaac585d",
+    "url": "/handoff-visualizer/static/js/main.84691c10.chunk.js"
   },
   {
     "revision": "8f5e85624f0b309c8832",
