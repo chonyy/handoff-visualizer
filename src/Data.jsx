@@ -63,29 +63,31 @@ export default class Data extends Component {
                     <div className="word">{typename}</div>
                     <div className={type}>{`${data} ${extra}`}</div>
                 </div>
-                <Plot
-                    data={[
-                        {
-                            x: xlist,
-                            y: list,
-                            type: "line",
-                            marker: { color: "#be3335" }
-                        },
-                        { type: "line", x: [0], y: [init] }
-                    ]}
-                    layout={{
-                        width: 350,
-                        height: 150,
-                        title: typename,
-                        showlegend: false,
-                        margin: {
-                            t: 30,
-                            r: 20,
-                            l: 45,
-                            b: 20
-                        }
-                    }}
-                />
+                <div className="plotlycontainer">
+                    <Plot
+                        data={[
+                            {
+                                x: xlist,
+                                y: list,
+                                type: "line",
+                                marker: { color: "#be3335" }
+                            },
+                            { type: "line", x: [0], y: [init] }
+                        ]}
+                        layout={{
+                            width: 350,
+                            height: 150,
+                            title: typename,
+                            showlegend: false,
+                            margin: {
+                                t: 30,
+                                r: 20,
+                                l: 45,
+                                b: 20
+                            }
+                        }}
+                    />
+                </div>
             </div>
         );
     }

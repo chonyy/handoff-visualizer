@@ -15,8 +15,6 @@ const pMin = -112;
 let policy = 0;
 let handoffs = 0;
 let averagepower = -103;
-let carsnumlist = [];
-let cnt = 0;
 let running = 0;
 
 const bstation = [
@@ -137,164 +135,11 @@ export default class Parent extends Component {
 
         this.setState({ grid: newgrid });
         let grid = this.state.grid;
-        return (
-            <div className="containerr">
-                <div className="board">
-                    {grid.map(row => {
-                        return (
-                            <div className="containerr">
-                                <div className="maincontent">
-                                    <div className="description">
-                                        <div
-                                            className="button"
-                                            onClick={() => this.handleClick()}
-                                        >
-                                            <div>Visualize</div>
-                                        </div>
-                                    </div>
-                                    <div className="simulation">
-                                        <div className="board">
-                                            {grid.map(row => {
-                                                return (
-                                                    <div
-                                                        key={uuidv4()}
-                                                        className="roww"
-                                                    >
-                                                        {row.map(node => {
-                                                            // console.log(node);
-                                                            return (
-                                                                <Child
-                                                                    key={uuidv4()}
-                                                                    row={
-                                                                        node.row
-                                                                    }
-                                                                    col={
-                                                                        node.col
-                                                                    }
-                                                                    visiting={
-                                                                        node.visiting
-                                                                    }
-                                                                    path={
-                                                                        node.path
-                                                                    }
-                                                                    bs={node.bs}
-                                                                    power={
-                                                                        node.power
-                                                                    }
-                                                                    handoff={
-                                                                        node.handoff
-                                                                    }
-                                                                ></Child>
-                                                            );
-                                                        })}
-                                                    </div>
-                                                );
-                                            })}
-                                        </div>
-                                    </div>
-                                    <div className="datas">
-                                        <Data
-                                            type={"cars"}
-                                            data={this.state.cars.length}
-                                        ></Data>
-                                        <Data
-                                            type={"handoffs"}
-                                            data={handoffs}
-                                        ></Data>
-                                        <Data
-                                            type={"power"}
-                                            data={averagepower}
-                                        ></Data>
-                                    </div>
-                                </div>
-                            </div>
-                        );
-                    })}
-                </div>
-            </div>
-        );
-    }
-
-    handledrop(clicked) {
-        if (clicked === 0) {
-            document.getElementById("dropdown-basic").innerHTML = "Best Policy";
-            policy = 0;
-        } else if (clicked === 1) {
-            document.getElementById("dropdown-basic").innerHTML =
-                "Threshsold Policy";
-            policy = 1;
-        } else if (clicked === 2) {
-            document.getElementById("dropdown-basic").innerHTML =
-                "Entrophy Policy";
-            policy = 2;
-        } else if (clicked === 3) {
-            document.getElementById("dropdown-basic").innerHTML =
-                "Minimum Policy";
-            policy = 3;
-        }
-    }
-
-    handleClick() {
-        if (running === 1) {
-            running = 0;
-            clearInterval(window.intervalid);
-        } else {
-            running = 1;
-            window.intervalid = setInterval(() => {
-                console.log(running);
-                let newentrances = updateenter(
-                    this.state.entrances,
-                    this.state.cars
-                );
-                let newcars = carmoving(this.state.entrances, this.state.cars);
-                let newgrid = move(this.state.cars);
-                this.setState({
-                    grid: newgrid,
-                    cars: newcars,
-                    entrances: newentrances
-                });
-            }, 600);
-        }
-
-        // if (running === 1) running = 0;
-        // else running = 1;
-        // for (let i = 0; i < 60; i++) {
-        //     console.log(running);
-        //     if (running === 0) {
-        //         break;
-        //     } else {
-        //         setTimeout(() => {
-        //             if (running === 0) {
-        //                 break;
-        //             let newentrances = updateenter(
-        //                 this.state.entrances,
-        //                 this.state.cars
-        //             );
-        //             let newcars = carmoving(
-        //                 this.state.entrances,
-        //                 this.state.cars
-        //             );
-        //             let newgrid = move(this.state.cars);
-        //             this.setState({
-        //                 grid: newgrid,
-        //                 cars: newcars,
-        //                 entrances: newentrances
-        //             });
-        //         }, 600 * i);
-        //     }
-        // }
-        // running = 0;
-    }
-
-    render() {
-        let grid = this.state.grid;
         let cars = this.state.cars;
         let entrances = this.state.entrances;
-        // checkpolicy();
-
         return (
-            <div className="containerr">
-                <div className="maincontent">
+            <div className="maincontent">
+                <div className="descontainer">
                     <div className="description">
                         <div className="goalcontainer">
                             <div className="intro goal">Goal</div>
@@ -345,6 +190,8 @@ export default class Parent extends Component {
                         </div>
                         <Icons></Icons>
                     </div>
+                </div>
+                <div className="simcontainer">
                     <div className="simulation">
                         <div className="board">
                             {grid.map(row => {
@@ -400,12 +247,185 @@ export default class Parent extends Component {
                             })}
                         </div>
                     </div>
+                </div>
+                <div className="datacontainer">
                     <div className="datas">
                         <Data type={"cars"} data={cars.length}></Data>
                         <Data type={"handoffs"} data={handoffs}></Data>
                         <Data type={"power"} data={averagepower}></Data>
                     </div>
                 </div>
+            </div>
+        );
+    }
+
+    handledrop(clicked) {
+        if (clicked === 0) {
+            document.getElementById("dropdown-basic").innerHTML = "Best Policy";
+            policy = 0;
+        } else if (clicked === 1) {
+            document.getElementById("dropdown-basic").innerHTML =
+                "Threshsold Policy";
+            policy = 1;
+        } else if (clicked === 2) {
+            document.getElementById("dropdown-basic").innerHTML =
+                "Entrophy Policy";
+            policy = 2;
+        } else if (clicked === 3) {
+            document.getElementById("dropdown-basic").innerHTML =
+                "Minimum Policy";
+            policy = 3;
+        }
+    }
+
+    handleClick() {
+        if (running === 1) {
+            running = 0;
+            clearInterval(window.intervalid);
+        } else {
+            running = 1;
+            window.intervalid = setInterval(() => {
+                console.log(running);
+                let newentrances = updateenter(
+                    this.state.entrances,
+                    this.state.cars
+                );
+                let newcars = carmoving(this.state.entrances, this.state.cars);
+                let newgrid = move(this.state.cars);
+                this.setState({
+                    grid: newgrid,
+                    cars: newcars,
+                    entrances: newentrances
+                });
+            }, 600);
+        }
+    }
+
+    render() {
+        let grid = this.state.grid;
+        let cars = this.state.cars;
+        let entrances = this.state.entrances;
+        return (
+            <div>
+                <div className="maincontent">
+                    <div className="descontainer">
+                        <div className="description">
+                            <div className="goalcontainer">
+                                <div className="intro goal">Goal</div>
+                                <div className="intro intropower">
+                                    Least Handoffs
+                                </div>
+                                <div className="intro introhandoffs">
+                                    Highest Power
+                                </div>
+                            </div>
+                            <Dropdown>
+                                <Dropdown.Toggle
+                                    size="lg"
+                                    variant="success"
+                                    id="dropdown-basic"
+                                >
+                                    Best Policy
+                                </Dropdown.Toggle>
+
+                                <Dropdown.Menu>
+                                    <Dropdown.Item
+                                        onClick={() => this.handledrop(0)}
+                                    >
+                                        Best Policy
+                                    </Dropdown.Item>
+                                    <Dropdown.Item
+                                        onClick={() => this.handledrop(1)}
+                                    >
+                                        Threshold Policy
+                                    </Dropdown.Item>
+                                    <Dropdown.Item
+                                        onClick={() => this.handledrop(2)}
+                                    >
+                                        Entrophy Policy
+                                    </Dropdown.Item>
+                                    <Dropdown.Item
+                                        onClick={() => this.handledrop(3)}
+                                    >
+                                        Minimum Policy
+                                    </Dropdown.Item>
+                                </Dropdown.Menu>
+                            </Dropdown>
+                            <div
+                                className="button"
+                                onClick={() => this.handleClick()}
+                            >
+                                <div>Visualize</div>
+                            </div>
+                            <Icons></Icons>
+                        </div>
+                    </div>
+                    <div className="simcontainer">
+                        <div className="simulation">
+                            <div className="board">
+                                {grid.map(row => {
+                                    return (
+                                        <div key={uuidv4()} className="roww">
+                                            {row.map(node => {
+                                                // console.log(node);
+                                                return (
+                                                    <Child
+                                                        key={uuidv4()}
+                                                        row={node.row}
+                                                        col={node.col}
+                                                        visiting={node.visiting}
+                                                        path={node.path}
+                                                        bs={node.bs}
+                                                        power={node.power}
+                                                        handoff={node.handoff}
+                                                    ></Child>
+                                                );
+                                            })}
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                            <div>
+                                {cars.map(car => {
+                                    return (
+                                        <Line
+                                            key={uuidv4()}
+                                            row={car.row}
+                                            col={car.col}
+                                            bs={car.bs}
+                                            handoff={car.handoff}
+                                        ></Line>
+                                    );
+                                })}
+                            </div>
+                            <div>
+                                {entrances.map(e => {
+                                    let entering = -1;
+                                    if (e.carenter === 0) entering = 0;
+                                    else if (e.carenter === 1) entering = 1;
+                                    e.carenter = -1;
+                                    return (
+                                        <Entrance
+                                            key={uuidv4()}
+                                            row={e.row}
+                                            col={e.col}
+                                            dir={e.arrowdir}
+                                            enter={entering}
+                                        ></Entrance>
+                                    );
+                                })}
+                            </div>
+                        </div>
+                    </div>
+                    <div className="datacontainer">
+                        <div className="datas">
+                            <Data type={"cars"} data={cars.length}></Data>
+                            <Data type={"handoffs"} data={handoffs}></Data>
+                            <Data type={"power"} data={averagepower}></Data>
+                        </div>
+                    </div>
+                </div>
+                <div className="footer"></div>
             </div>
         );
     }
@@ -762,35 +782,4 @@ function updateenter(entrances, cars) {
     }
 
     return newE;
-}
-
-function updateremove(entrances, cars) {
-    for (let i = 0; i < cars.length; i++) {
-        let row = cars[i].row;
-        let col = cars[i].col;
-        let dir = cars[i].dir;
-        // console.log(row, col, dir);
-        if (row === 0 && col === 7 && dir === 0) entrances[0].carenter = 1;
-        else if (row === 0 && col === 21 && dir === 0)
-            entrances[1].carenter = 1;
-        else if (row === 20 && col === 7 && dir === 2)
-            entrances[2].carenter = 1;
-        else if (row === 20 && col === 21 && dir === 2)
-            entrances[3].carenter = 1;
-        else if (row === 5 && col === 28 && dir === 1)
-            entrances[4].carenter = 1;
-        else if (row === 15 && col === 28 && dir === 1)
-            entrances[5].carenter = 1;
-        else if (row === 5 && col === 0 && dir === 3) entrances[6].carenter = 1;
-        else if (row === 15 && col === 0 && dir === 3)
-            entrances[7].carenter = 1;
-    }
-}
-
-function checkpolicy() {
-    let policytext = document.getElementById("dropdownMenuButton").textContent;
-    if (policytext === "Best Policy") policy = 0;
-    else if (policytext === "Threshold Policy") policy = 1;
-    else if (policytext === "Entrophy Policy") policy = 2;
-    else if (policytext === "Minimum Policy") policy = 3;
 }

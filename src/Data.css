@@ -18,14 +18,18 @@
 .handoffs {
     color: #fc913a;
     font-weight: bold;
-
 }
 
 .power {
     color: #ff4e50;
     font-weight: bold;
-
 }
+
+/* .plotlycontainer {
+    width: 350px;
+    height: 100px;
+    background-color: red;
+} */
 
 /* .datacontainer {
     border: 2px solid darkolivegreen;

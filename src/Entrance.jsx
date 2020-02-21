@@ -39,7 +39,7 @@ export default class Entrance extends Component {
         return (
             <div
                 style={entrancestyle}
-                className={`${arrowimg} ${entering}`}
+                className={`${arrowimg} ${entering} arrowsize`}
             ></div>
         );
     }
@@ -72,8 +72,6 @@ function getstyle(node, dir, enter) {
     let style = {
         padding: "0px",
         margin: "0px",
-        width: "80px",
-        height: "80px",
         position: "absolute",
         top: y + "px",
         left: x + "px"
