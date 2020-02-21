@@ -1,5 +1,5 @@
 <p align=center>
-    <img src="img/handoff.PNG">
+    <img src="img/handoff.PNG" width="636" height="391">
 </p>
 
 https://chonyy.github.io/handoff-visualizer/
@@ -20,13 +20,13 @@ if (Pnew > Pold && Pold < T) {
     car.power = Pnew;
 }
 
-//Threshold Policy
+//Entrophy Policy
 if (Pnew > Pold + E) {
     car.bs = Bnew;
     car.power = Pnew;
 }
 
-//Threshold Policy
+//Minimum Policy
 if (Pnew < Pmin) {
     car.bs = Bnew;
     car.power = Pnew;
