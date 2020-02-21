@@ -83,7 +83,7 @@ The received power is calculated by the formula.
 <p align=center>
     <a href="http://www.youtube.com/watch?feature=player_embedded&v=xNy4vw-d1m8
 " target="_blank"><img src="http://img.youtube.com/vi/xNy4vw-d1m8/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="960" height="512" /></a>
+alt="IMAGE ALT TEXT HERE" width="480" height="360" /></a>
 </p>
 
 ## Parameter values
