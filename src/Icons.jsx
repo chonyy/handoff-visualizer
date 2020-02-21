@@ -20,6 +20,10 @@ export default class Icons extends Component {
                     <div className="legend second">BS (Base station)</div>
                 </div>
                 <div className="icon-row">
+                    <div className="transmission first"></div>
+                    <div className="legend second">Data Transmitting</div>
+                </div>
+                <div className="icon-row">
                     <div className="path first"></div>
                     <div className="legend second">MS Path</div>
                 </div>
@@ -29,11 +33,22 @@ export default class Icons extends Component {
                 </div>
                 <div className="icon-row">
                     <div className="handoff first"></div>
-                    <div className="legend second">Handoff</div>
+                    <div className="legend second">Handoff Made</div>
                 </div>
                 <div className="icon-row">
-                    <div className="transmission first"></div>
-                    <div className="legend second">Transmission Path</div>
+                    <div className="entrance first"></div>
+                    <div>
+                        <div className="legend second">MS Entrance</div>
+                    </div>
+                </div>
+                <div className="third">(Cars can only enter or leave here)</div>
+                <div className="icon-row">
+                    <div className="entering first"></div>
+                    <div className="legend second">Car Entering</div>
+                </div>
+                <div className="icon-row">
+                    <div className="leaving first"></div>
+                    <div className="legend second">Car leaving</div>
                 </div>
             </div>
         );
@@ -43,7 +58,5 @@ export default class Icons extends Component {
 /* black arrow
 green arrow
 red arrow
-
-connection line
 
 make img with ppt */

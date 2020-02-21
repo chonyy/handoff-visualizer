@@ -89,6 +89,8 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 2vw;
+    /* background-color: #fff; */
 }
 
 .simulation {
@@ -110,7 +112,7 @@ img {
     width: 200px;
     text-align: center;
     text-decoration: none;
-    margin: 3vw 2vw 0 2vw;
+    margin: 1vw 2vw 0 2vw;
     border-radius: 100%;
     font-size: 40px;
     font-weight: bold;
@@ -138,7 +140,7 @@ img {
 }
 
 .dropdown .btn {
-    margin-top: 3vw;
+    margin-top: 0.8vw;
     border-width: 0;
     background: #274455;
     color: #fff;
@@ -169,4 +171,33 @@ img {
 .nav-item {
     padding-left: 20px;
     padding-right: 20px;
+}
+
+.intro {
+    /* width: 30%; */
+    color: darkolivegreen;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 1px 25px;
+}
+
+.goal {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.goalcontainer {
+    margin-top: 0.5vw;
+    border: 2px solid darkolivegreen;
+    border-radius: 10px;
+}
+
+.intropower {
+    color: #fc913a;
+}
+
+.introhandoffs {
+    color: #ff4e50;
 }

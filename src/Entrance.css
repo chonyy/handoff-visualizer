@@ -20,7 +20,7 @@
 
 .entering {
     animation-name: enterAnimation;
-    animation-duration: 0.5s;
+    animation-duration: 0.6s;
     animation-timing-function: ease-out;
     animation-delay: 0;
     animation-direction: alternate;
@@ -59,7 +59,7 @@
 
 .entering {
     animation-name: enterAnimation;
-    animation-duration: 0.5s;
+    animation-duration: 0.6s;
     animation-timing-function: ease-out;
     animation-delay: 0;
     animation-direction: alternate;
@@ -98,7 +98,7 @@
 
 .leaving {
     animation-name: leaveAnimation;
-    animation-duration: 0.5s;
+    animation-duration: 0.6s;
     animation-timing-function: ease-out;
     animation-delay: 0;
     animation-direction: alternate;

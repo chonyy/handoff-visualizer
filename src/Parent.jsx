@@ -142,10 +142,7 @@ export default class Parent extends Component {
                     {grid.map(row => {
                         return (
                             <div className="containerr">
-                                {/* <div className="firstRow"> */}
-
                                 <div className="maincontent">
-                                    {/* </div> */}
                                     <div className="description">
                                         <div
                                             className="button"
@@ -255,7 +252,7 @@ export default class Parent extends Component {
                     cars: newcars,
                     entrances: newentrances
                 });
-            }, 500 * i);
+            }, 600 * i);
         }
     }
 
@@ -269,6 +266,15 @@ export default class Parent extends Component {
             <div className="containerr">
                 <div className="maincontent">
                     <div className="description">
+                        <div className="goalcontainer">
+                            <div className="intro goal">Goal</div>
+                            <div className="intro intropower">
+                                Least Handoffs
+                            </div>
+                            <div className="intro introhandoffs">
+                                Highest Power
+                            </div>
+                        </div>
                         <Dropdown>
                             <Dropdown.Toggle
                                 size="lg"

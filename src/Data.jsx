@@ -26,6 +26,7 @@ export default class Data extends Component {
         let type = this.props.type;
         let data = this.props.data;
         let typename = "";
+        let extra = "";
         let xlist = [];
         let list = [];
         if (type === "cars") {
@@ -45,7 +46,8 @@ export default class Data extends Component {
             list = handoffslist;
             init = 0;
         } else if (type === "power") {
-            typename = "Avg. Power";
+            typename = "Average Power";
+            extra = "dBm";
             data = data.toFixed(2);
             powerlist.push(data);
             powercntlist.push(powercnt);
@@ -59,7 +61,7 @@ export default class Data extends Component {
             <div className="datacontainer">
                 <div className="data">
                     <div className="word">{typename}</div>
-                    <div className={type}>{data}</div>
+                    <div className={type}>{`${data} ${extra}`}</div>
                 </div>
                 <Plot
                     data={[
