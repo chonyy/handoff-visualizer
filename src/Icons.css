@@ -1,0 +1,50 @@
+.icons-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3vw;
+    width: 100%;
+    /* background-color: #fff; */
+}
+
+.icon-row {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-evenly; */
+    margin: 5px;
+    width: 100%;
+}
+
+.ms {
+    background-color: rgb(235, 95, 118);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    width: 32px;
+    height: 32px;
+}
+
+.legend {
+    font-size: 20px;
+}
+
+.bs {
+    width: 32px;
+    height: 32px;
+    background-image: url(bs.svg);
+    background-color: #ffc952;
+    background-size: cover;
+}
+
+.first {
+    margin-left: 3vw;
+}
+
+.second {
+    margin-left: 1.5vw;
+}

@@ -4,6 +4,8 @@ import uuidv4 from "uuid/v4";
 import Line from "./Line";
 import Entrance from "./Entrance";
 import Data from "./Data";
+import Dropdown from "react-bootstrap/Dropdown";
+import Icons from "./Icons";
 import "./Parent.css";
 
 const p = 0.0163911909;
@@ -215,13 +217,32 @@ export default class Parent extends Component {
         );
     }
 
+    handledrop(clicked) {
+        if (clicked === 0) {
+            document.getElementById("dropdown-basic").innerHTML = "Best Policy";
+            policy = 0;
+        } else if (clicked === 1) {
+            document.getElementById("dropdown-basic").innerHTML =
+                "Threshsold Policy";
+            policy = 1;
+        } else if (clicked === 2) {
+            document.getElementById("dropdown-basic").innerHTML =
+                "Entrophy Policy";
+            policy = 2;
+        } else if (clicked === 3) {
+            document.getElementById("dropdown-basic").innerHTML =
+                "Minimum Policy";
+            policy = 3;
+        }
+    }
+
     handleClick() {
         // setInterval(() => {
         //     let newcars = carmoving(this.state.cars);
         //     let newgrid = move(this.state.cars);
         //     this.setState({ grid: newgrid, cars: newcars });
         // }, 10);
-        for (let i = 0; i < 50; i++) {
+        for (let i = 0; i < 60; i++) {
             setTimeout(() => {
                 let newentrances = updateenter(
                     this.state.entrances,
@@ -242,18 +263,51 @@ export default class Parent extends Component {
         let grid = this.state.grid;
         let cars = this.state.cars;
         let entrances = this.state.entrances;
-        checkpolicy();
+        // checkpolicy();
 
         return (
             <div className="containerr">
                 <div className="maincontent">
                     <div className="description">
+                        <Dropdown>
+                            <Dropdown.Toggle
+                                size="lg"
+                                variant="success"
+                                id="dropdown-basic"
+                            >
+                                Best Policy
+                            </Dropdown.Toggle>
+
+                            <Dropdown.Menu>
+                                <Dropdown.Item
+                                    onClick={() => this.handledrop(0)}
+                                >
+                                    Best Policy
+                                </Dropdown.Item>
+                                <Dropdown.Item
+                                    onClick={() => this.handledrop(1)}
+                                >
+                                    Threshold Policy
+                                </Dropdown.Item>
+                                <Dropdown.Item
+                                    onClick={() => this.handledrop(2)}
+                                >
+                                    Entrophy Policy
+                                </Dropdown.Item>
+                                <Dropdown.Item
+                                    onClick={() => this.handledrop(3)}
+                                >
+                                    Minimum Policy
+                                </Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown>
                         <div
                             className="button"
                             onClick={() => this.handleClick()}
                         >
                             <div>Visualize</div>
                         </div>
+                        <Icons></Icons>
                     </div>
                     <div className="simulation">
                         <div className="board">

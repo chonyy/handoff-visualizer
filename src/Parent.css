@@ -85,7 +85,11 @@ img {
     height: 100px;
 }
 
-.description {}
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .simulation {
     margin: 0px 6vw 0px 6vw;
@@ -95,7 +99,7 @@ img {
 }
 
 .button {
-    background-color: #fc821e;
+    background-color: #e3504d;
     border: none;
     color: white;
     display: flex;
@@ -106,16 +110,21 @@ img {
     width: 200px;
     text-align: center;
     text-decoration: none;
-    margin: 7vw 2vw 20px 3vw;
+    margin: 3vw 2vw 0 2vw;
     border-radius: 100%;
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
-    animation: shadow-pulse 2s infinite;
+    animation: shadow-pulse 1.5s infinite;
 }
 
 .button:hover {
-    background-color: #ff7300;
+    background-color: #e22825;
+    transform: scale(1.1);
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    transition: all 0.4s ease 0s;
 }
 
 @keyframes shadow-pulse {
@@ -129,6 +138,8 @@ img {
 }
 
 .dropdown .btn {
+    margin-top: 3vw;
+    border-width: 0;
     background: #274455;
     color: #fff;
 }
@@ -136,4 +147,26 @@ img {
 .dropdown .btn:hover {
     background: #3d6379;
     color: #fff;
+    border-width: 0;
+    transform: scale(1.05);
+}
+
+.dropdown .btn:focus {
+    border-width: 0;
+    background: #3d6379;
+}
+
+.dropdown .btn:active {
+    border-width: 0px;
+    background: #3d6379;
+}
+
+.nav-link {
+    color: #ddd !important;
+    font-size: 18px !important;
+}
+
+.nav-item {
+    padding-left: 20px;
+    padding-right: 20px;
 }

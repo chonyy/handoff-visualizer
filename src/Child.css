@@ -70,7 +70,8 @@
 .handoff {
     background-image: url("handoff3.svg");
     background-size: cover;
-    filter: invert(50%) sepia(98%) saturate(2300%) hue-rotate(4deg) brightness(96%) contrast(101%);
+    filter: invert(50%) sepia(98%) saturate(2300%) hue-rotate(4deg)
+        brightness(96%) contrast(101%);
 
     animation-name: handoffAnimation;
     animation-duration: 0.5s;
