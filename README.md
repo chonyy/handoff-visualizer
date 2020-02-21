@@ -4,6 +4,8 @@
 
 https://chonyy.github.io/handoff-visualizer/
 
+## Policies Pseudocode
+
 ```javascript
 //Power referred to P, base station referered to B
 //Threshold referred to T, Entrophy referred to E
@@ -32,6 +34,31 @@ if (Pnew < Pmin) {
     car.power = Pnew;
 }
 ```
+
+## Parameter values
+
+| Parameters |  Value   |
+| ---------- | :------: |
+| Threshold  | -108 dBm |
+| Entrophy   |  5 dBm   |
+| Minimum    | -112 dBm |
+
+## Posssibility of turning
+
+### Intersection with four roads
+
+| Direction   | Possibility |
+| ----------- | :---------: |
+| Go straight |     1/2     |
+| Turn right  |     1/3     |
+| Turn left   |     1/6     |
+
+### Intersection with three roads
+
+| Direction  | Possibility |
+| ---------- | :---------: |
+| Turn right |     1/2     |
+| Turn left  |     1/2     |
 
 **still writing docs, please wait for one to two days**
 
