@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/handoff-visualizer/static/css/main.09789ac9.chunk.css",
-    "main.js": "/handoff-visualizer/static/js/main.84691c10.chunk.js",
-    "main.js.map": "/handoff-visualizer/static/js/main.84691c10.chunk.js.map",
+    "main.css": "/handoff-visualizer/static/css/main.8efbb77f.chunk.css",
+    "main.js": "/handoff-visualizer/static/js/main.22b3f717.chunk.js",
+    "main.js.map": "/handoff-visualizer/static/js/main.22b3f717.chunk.js.map",
     "runtime-main.js": "/handoff-visualizer/static/js/runtime-main.384b9427.js",
     "runtime-main.js.map": "/handoff-visualizer/static/js/runtime-main.384b9427.js.map",
     "static/js/2.258da79f.chunk.js": "/handoff-visualizer/static/js/2.258da79f.chunk.js",
     "static/js/2.258da79f.chunk.js.map": "/handoff-visualizer/static/js/2.258da79f.chunk.js.map",
     "index.html": "/handoff-visualizer/index.html",
-    "precache-manifest.c8cb8c498394e4ffed89a2e3b643b3c0.js": "/handoff-visualizer/precache-manifest.c8cb8c498394e4ffed89a2e3b643b3c0.js",
+    "precache-manifest.c74ed3126550d3cc8ca9b5f061587caa.js": "/handoff-visualizer/precache-manifest.c74ed3126550d3cc8ca9b5f061587caa.js",
     "service-worker.js": "/handoff-visualizer/service-worker.js",
-    "static/css/main.09789ac9.chunk.css.map": "/handoff-visualizer/static/css/main.09789ac9.chunk.css.map",
+    "static/css/main.8efbb77f.chunk.css.map": "/handoff-visualizer/static/css/main.8efbb77f.chunk.css.map",
     "static/js/2.258da79f.chunk.js.LICENSE.txt": "/handoff-visualizer/static/js/2.258da79f.chunk.js.LICENSE.txt",
     "static/media/Entrance.css": "/handoff-visualizer/static/media/arrow2.5c36b00b.svg",
     "static/media/Icons.css": "/handoff-visualizer/static/media/bs.eeebed52.svg",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.384b9427.js",
     "static/js/2.258da79f.chunk.js",
-    "static/css/main.09789ac9.chunk.css",
-    "static/js/main.84691c10.chunk.js"
+    "static/css/main.8efbb77f.chunk.css",
+    "static/js/main.22b3f717.chunk.js"
   ]
 }
