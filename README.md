@@ -4,7 +4,34 @@
 
 https://chonyy.github.io/handoff-visualizer/
 
-**still writing docs, please wait for one to two days**
+```javascript
+//Power referred to P, base station referered to B
+//Threshold referred to T, Entrophy referred to E
+
+// Best Policy
+if (Pnew > Pold) {
+    car.bs = Bnew;
+    car.power = Pnew;
+}
+
+//Threshold Policy
+if (Pnew > Pold && Pold < T) {
+    car.bs = Bnew;
+    car.power = Pnew;
+}
+
+//Threshold Policy
+if (Pnew > Pold + E) {
+    car.bs = Bnew;
+    car.power = Pnew;
+}
+
+//Threshold Policy
+if (Pnew < Pmin) {
+    car.bs = Bnew;
+    car.power = Pnew;
+}
+```
 
 **still writing docs, please wait for one to two days**
 
