@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/handoff-visualizer/precache-manifest.171ec72f15f9ff97503af8d7889eb6f8.js"
+  "/handoff-visualizer/precache-manifest.8a6aa67fb7b8959b3ab3b8f6d3db0bf4.js"
 );
 
 self.addEventListener('message', (event) => {
