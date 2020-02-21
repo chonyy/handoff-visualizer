@@ -37,6 +37,8 @@ if (Pnew < Pmin) {
 
 ## Parameter values
 
+The different parameters for each policy are listed below
+
 | Parameters |  Value   |
 | ---------- | :------: |
 | Threshold  | -108 dBm |
@@ -44,6 +46,8 @@ if (Pnew < Pmin) {
 | Minimum    | -112 dBm |
 
 ## Posssibility of turning
+
+The possibility of changing direction when encountering intersection is listed below
 
 ### Intersection with four roads
 
