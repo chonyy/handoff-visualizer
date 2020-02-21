@@ -2,15 +2,15 @@
     <img src="img/handoff.PNG" width="636" height="391">
 </p>
 
-> 📶Wiresless network handoff simulator built with react.js!
+> 📶 Wiresless network handoff simulator built with react.js!
 
 Play with it! https://chonyy.github.io/handoff-visualizer/
 
 ## Policies Pseudocode
 
-Power referred to P, base station referered to B.
+Power referred to **P**, base station referered to **B**.
 
-Threshold referred to T, Entrophy referred to E.
+Threshold referred to **T**, Entrophy referred to **E**.
 
 ### Best Policy
 
@@ -53,10 +53,10 @@ if (Pnew < Pmin) {
 <p align=center>
     <img src="img/simulation structure.PNG">
 </p>
-Each block is a 120*80(m^2). Cars are assummed to be moving on the line between blocks that doesn't take any space.
+Each block is composed of 24 nodes, which make the block size 120 * 80 (m^2). Cars are assummed to be moving on the line between blocks that doesn't take any space.
 
--   ⋋ = 1 cars/ min [ P(t) = ⋋"e" ^(−"⋋" ) (Hint: t is in sec) ]
--   Velocity = 72km/hr
+-   **⋋** = 1 cars/ min [ P(t) = ⋋"e" ^(−"⋋" ) (Hint: t is in sec) ]
+-   **Velocity** = 72km/hr
 
 ### Car Entrance Distribution
 
@@ -64,8 +64,8 @@ The probability of the entrance follows [Poisson distribution](https://en.wikipe
 
 In our simultation
 
--   ⋋ = 0.0167 cars/ sec
--   k = 1
+-   **⋋** = 0.0167 cars/ sec
+-   **k** = 1
 
 ### Received Power
 
@@ -75,20 +75,20 @@ The received power is calculated by the formula.
 -   Base = 1mW
 -   10log(Pt/Base) = dBm
 -   First-meter path loss = 10 dBm
--   P0 = -50 dBm
--   Pd = -60 - 20log(d(m) / 1m)
+-   **P0 = -50 dBm**
+-   **Pd = -60 - 20log(d(m) / 1m)**
 
 ## Demo Video
 
 <p align=center>
     <a href="http://www.youtube.com/watch?feature=player_embedded&v=xNy4vw-d1m8
 " target="_blank"><img src="http://img.youtube.com/vi/xNy4vw-d1m8/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="480" height="360" /></a>
+alt="IMAGE ALT TEXT HERE" width="960" height="512" /></a>
 </p>
 
 ## Parameter values
 
-The different parameters for each policy are listed below
+The different parameters for each policy are listed below.
 
 | Parameters |  Value   |
 | ---------- | :------: |
@@ -98,7 +98,7 @@ The different parameters for each policy are listed below
 
 ## Posssibility of turning
 
-The possibility of changing direction when encountering intersection is listed below
+The possibility of changing direction when encountering intersection is listed below.
 
 ### Intersection with four roads
 
