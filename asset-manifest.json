@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/handoff-visualizer/static/css/main.6d70acf1.chunk.css",
-    "main.js": "/handoff-visualizer/static/js/main.b4e5397e.chunk.js",
-    "main.js.map": "/handoff-visualizer/static/js/main.b4e5397e.chunk.js.map",
+    "main.js": "/handoff-visualizer/static/js/main.f2f085b3.chunk.js",
+    "main.js.map": "/handoff-visualizer/static/js/main.f2f085b3.chunk.js.map",
     "runtime-main.js": "/handoff-visualizer/static/js/runtime-main.384b9427.js",
     "runtime-main.js.map": "/handoff-visualizer/static/js/runtime-main.384b9427.js.map",
     "static/js/2.1459bbbe.chunk.js": "/handoff-visualizer/static/js/2.1459bbbe.chunk.js",
     "static/js/2.1459bbbe.chunk.js.map": "/handoff-visualizer/static/js/2.1459bbbe.chunk.js.map",
     "index.html": "/handoff-visualizer/index.html",
-    "precache-manifest.f277187863a9efbf8217e9bccf64dc09.js": "/handoff-visualizer/precache-manifest.f277187863a9efbf8217e9bccf64dc09.js",
+    "precache-manifest.beeb5c03484e41f4230761ea251e3eb3.js": "/handoff-visualizer/precache-manifest.beeb5c03484e41f4230761ea251e3eb3.js",
     "service-worker.js": "/handoff-visualizer/service-worker.js",
     "static/css/main.6d70acf1.chunk.css.map": "/handoff-visualizer/static/css/main.6d70acf1.chunk.css.map",
     "static/js/2.1459bbbe.chunk.js.LICENSE.txt": "/handoff-visualizer/static/js/2.1459bbbe.chunk.js.LICENSE.txt",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.384b9427.js",
     "static/js/2.1459bbbe.chunk.js",
     "static/css/main.6d70acf1.chunk.css",
-    "static/js/main.b4e5397e.chunk.js"
+    "static/js/main.f2f085b3.chunk.js"
   ]
 }
