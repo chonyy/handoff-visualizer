@@ -214,7 +214,8 @@ img {
 #dropdown-basic {
     width: 13vw;
     height: 3vw;
-    letter-spacing: 0.2vw;
+    letter-spacing: 0.15vw;
+    font-size: 1vw;
 }
 
 #dropdownitem {
@@ -223,9 +224,9 @@ img {
 
 
 .navbar-nav>li {
-    font-size: 1.3vw;
+    font-size: 1.1vw;
 }
 
 .dropdown-menu {
-    font-size: 1.3vw;
+    font-size: 1.1vw;
 }
