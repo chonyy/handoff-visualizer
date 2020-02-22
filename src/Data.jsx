@@ -65,6 +65,8 @@ export default class Data extends Component {
                 </div>
                 <div className="plotlycontainer">
                     <Plot
+                        style={{ width: "100%", height: "100%" }}
+                        useResizeHandler
                         data={[
                             {
                                 x: xlist,
@@ -75,8 +77,7 @@ export default class Data extends Component {
                             { type: "line", x: [0], y: [init] }
                         ]}
                         layout={{
-                            width: 350,
-                            height: 150,
+                            autosize: true,
                             title: typename,
                             showlegend: false,
                             margin: {
@@ -84,7 +85,8 @@ export default class Data extends Component {
                                 r: 20,
                                 l: 45,
                                 b: 20
-                            }
+                            },
+                            useResizeHandler: true
                         }}
                     />
                 </div>

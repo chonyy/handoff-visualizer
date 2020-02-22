@@ -50,7 +50,7 @@ img {
     top: 100px;
 }
 
-.plot-container > div {
+.plot-container>div {
     margin: 10px;
 }
 
@@ -127,7 +127,7 @@ img {
     }
 
     100% {
-        box-shadow: 0 0 0 25px rgba(0, 0, 0, 0);
+        box-shadow: 0 0 0 1.5vw rgba(0, 0, 0, 0);
     }
 }
 
@@ -209,4 +209,23 @@ img {
     /* flex-basis: 0;
     flex-grow: 1; */
     /* width: 50vw; */
+}
+
+#dropdown-basic {
+    width: 13vw;
+    height: 3vw;
+    letter-spacing: 0.2vw;
+}
+
+#dropdownitem {
+    width: 20vw !important;
+}
+
+
+.navbar-nav>li {
+    font-size: 1.3vw;
+}
+
+.dropdown-menu {
+    font-size: 1.3vw;
 }

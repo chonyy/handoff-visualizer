@@ -1,13 +1,13 @@
 .data {
     padding: 5px 20px;
-    font-size: 45px;
+    font-size: 2.4vw;
     border-radius: 25%;
     text-align: center;
 }
 
 .word {
     color: #274455;
-    font-size: 20px;
+    font-size: 1vw;
 }
 
 .cars {
@@ -25,17 +25,8 @@
     font-weight: bold;
 }
 
-/* .plotlycontainer {
-    width: 350px;
-    height: 100px;
-    background-color: red;
-} */
-
-/* .datacontainer {
-    border: 2px solid darkolivegreen;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    border-radius: 10px;
-} */
+.plotlycontainer {
+    width: 18vw;
+    height: 8vw;
+    margin: 5px 0;
+}
