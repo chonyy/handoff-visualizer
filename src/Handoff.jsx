@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Child from "./child";
+import Node from "./Node";
 import uuidv4 from "uuid/v4";
 import Line from "./Line";
 import Entrance from "./Entrance";
@@ -7,7 +7,7 @@ import Data from "./Data";
 import Dropdown from "react-bootstrap/Dropdown";
 import Icons from "./Icons";
 import BootstrapNav from "./BootstrapNav";
-import "./Parent.css";
+import "./Handoff.css";
 
 const p = 0.0163911909;
 const e = 5;
@@ -37,7 +37,7 @@ const bstation = [
     }
 ];
 
-export default class Parent extends Component {
+export default class Handoff extends Component {
     constructor() {
         super();
 
@@ -202,7 +202,7 @@ export default class Parent extends Component {
                                         {row.map(node => {
                                             // console.log(node);
                                             return (
-                                                <Child
+                                                <Node
                                                     key={uuidv4()}
                                                     row={node.row}
                                                     col={node.col}
@@ -211,7 +211,7 @@ export default class Parent extends Component {
                                                     bs={node.bs}
                                                     power={node.power}
                                                     handoff={node.handoff}
-                                                ></Child>
+                                                ></Node>
                                             );
                                         })}
                                     </div>
@@ -372,7 +372,7 @@ export default class Parent extends Component {
                                             {row.map(node => {
                                                 // console.log(node);
                                                 return (
-                                                    <Child
+                                                    <Node
                                                         key={uuidv4()}
                                                         row={node.row}
                                                         col={node.col}
@@ -381,7 +381,7 @@ export default class Parent extends Component {
                                                         bs={node.bs}
                                                         power={node.power}
                                                         handoff={node.handoff}
-                                                    ></Child>
+                                                    ></Node>
                                                 );
                                             })}
                                         </div>

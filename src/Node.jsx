@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import "./Child.css";
+import "./Node.css";
 
-export default class Child extends Component {
+export default class Node extends Component {
     render() {
         let id =
             this.props.bs >= 0

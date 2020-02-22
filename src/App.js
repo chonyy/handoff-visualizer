@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import Parent from './Parent'
+import Handoff from './Handoff'
 
 function App() {
     return (
-        <Parent />
+        <Handoff />
     );
 }
 
