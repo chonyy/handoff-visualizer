@@ -6,6 +6,7 @@ import Entrance from "./Entrance";
 import Data from "./Data";
 import Dropdown from "react-bootstrap/Dropdown";
 import Icons from "./Icons";
+import BootstrapNav from "./BootstrapNav";
 import "./Parent.css";
 
 const p = 0.0163911909;
@@ -307,6 +308,7 @@ export default class Parent extends Component {
         let entrances = this.state.entrances;
         return (
             <div>
+                <BootstrapNav></BootstrapNav>
                 <div className="maincontent">
                     <div className="descontainer">
                         <div className="description">
