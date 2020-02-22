@@ -88,6 +88,7 @@ export default class Data extends Component {
                             },
                             useResizeHandler: true
                         }}
+                        config={{ displayModeBar: false }}
                     />
                 </div>
             </div>
