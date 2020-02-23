@@ -51,7 +51,7 @@ if (Pnew < Pmin) {
 ## Simulation Structure
 
 <p align=center>
-    <img src="img/simulation structure.PNG">
+    <img src="img/simulation structure.PNG" width="419" height="295">
 </p>
 Each node is a 20 * 20 (m^2) square. A block is composed of 24 nodes, whick makes the block size 120 * 80 (m^2). Cars are assummed to be moving on an extremely thin line between blocks, the line doesn't take up any space. The velocity of the car is 20m/s. This means, in our simultation, we iterate once in a second, and the cars moves one node, all the data are calculated every second.
 
