@@ -1,20 +1,13 @@
 import React, { Component } from "react";
-import Node from "./Node";
-import uuidv4 from "uuid/v4";
-import Line from "./Line";
-import Entrance from "./Entrance";
-import Data from "./Data";
 import BootstrapNav from "./BootstrapNav";
 import "./Handoff.css";
 import BootstrapDrop from "./BootstrapDrop";
 import Icons from "./Icons";
-import Description from "./Description";
 import Simulation from "./Simulation";
 import Plots from "./Plots";
-import Dropdown from "react-bootstrap/Dropdown";
 import { initgrid, move, carmoving, power, updateenter } from "./utils.mjs";
 
-let policy = 0;
+let policyobj = { policy: 0 };
 let plotdata = { handoffs: 0, averagepower: -103 };
 let running = 0;
 
@@ -139,54 +132,41 @@ export default class Handoff extends Component {
         let cars = this.state.cars;
         let entrances = this.state.entrances;
         return (
-            <div className="maincontent">
-                <div className="descontainer">
-                    <div className="description">
-                        <div className="goalcontainer">
-                            <div className="intro goal">Goal</div>
-                            <div className="intro intropower">
-                                Least Handoffs
+            <div>
+                <BootstrapNav></BootstrapNav>
+                <div className="maincontent">
+                    <div className="descontainer">
+                        <div className="description">
+                            <div className="goalcontainer">
+                                <div className="intro goal">Goal</div>
+                                <div className="intro intropower">
+                                    Least Handoffs
+                                </div>
+                                <div className="intro introhandoffs">
+                                    Highest Power
+                                </div>
                             </div>
-                            <div className="intro introhandoffs">
-                                Highest Power
+                            <BootstrapDrop
+                                policyobj={policyobj}
+                            ></BootstrapDrop>
+                            <div
+                                className="button"
+                                onClick={() => this.handleClick()}
+                            >
+                                <div>Visualize</div>
                             </div>
+                            <Icons></Icons>
                         </div>
-                        <BootstrapDrop></BootstrapDrop>
-                        <div
-                            className="button"
-                            onClick={() => this.handleClick()}
-                        >
-                            <div>Visualize</div>
-                        </div>
-                        <Icons></Icons>
                     </div>
+                    <Simulation
+                        grid={grid}
+                        cars={cars}
+                        entrances={entrances}
+                    ></Simulation>
                 </div>
-                <Simulation
-                    grid={grid}
-                    cars={cars}
-                    entrances={entrances}
-                ></Simulation>
+                <div className="footer"></div>
             </div>
         );
-    }
-
-    handledrop(clicked) {
-        if (clicked === 0) {
-            document.getElementById("dropdown-basic").innerHTML = "Best Policy";
-            policy = 0;
-        } else if (clicked === 1) {
-            document.getElementById("dropdown-basic").innerHTML =
-                "Threshsold Policy";
-            policy = 1;
-        } else if (clicked === 2) {
-            document.getElementById("dropdown-basic").innerHTML =
-                "Entrophy Policy";
-            policy = 2;
-        } else if (clicked === 3) {
-            document.getElementById("dropdown-basic").innerHTML =
-                "Minimum Policy";
-            policy = 3;
-        }
     }
 
     handleClick() {
@@ -204,7 +184,7 @@ export default class Handoff extends Component {
                 let newcars = carmoving(
                     this.state.entrances,
                     this.state.cars,
-                    policy,
+                    policyobj.policy,
                     plotdata
                 );
                 let newgrid = move(this.state.cars);
@@ -236,38 +216,9 @@ export default class Handoff extends Component {
                                     Highest Power
                                 </div>
                             </div>
-                            <Dropdown>
-                                <Dropdown.Toggle
-                                    size="lg"
-                                    variant="success"
-                                    id="dropdown-basic"
-                                >
-                                    Best Policy
-                                </Dropdown.Toggle>
-
-                                <Dropdown.Menu>
-                                    <Dropdown.Item
-                                        onClick={() => this.handledrop(0)}
-                                    >
-                                        Best Policy
-                                    </Dropdown.Item>
-                                    <Dropdown.Item
-                                        onClick={() => this.handledrop(1)}
-                                    >
-                                        Threshold Policy
-                                    </Dropdown.Item>
-                                    <Dropdown.Item
-                                        onClick={() => this.handledrop(2)}
-                                    >
-                                        Entrophy Policy
-                                    </Dropdown.Item>
-                                    <Dropdown.Item
-                                        onClick={() => this.handledrop(3)}
-                                    >
-                                        Minimum Policy
-                                    </Dropdown.Item>
-                                </Dropdown.Menu>
-                            </Dropdown>
+                            <BootstrapDrop
+                                policyobj={policyobj}
+                            ></BootstrapDrop>
                             <div
                                 className="button"
                                 onClick={() => this.handleClick()}
