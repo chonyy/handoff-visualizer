@@ -161,73 +161,11 @@ export default class Handoff extends Component {
                         <Icons></Icons>
                     </div>
                 </div>
-                <div className="simcontainer">
-                    <div className="simulation">
-                        <div className="board">
-                            {grid.map(row => {
-                                return (
-                                    <div key={uuidv4()} className="roww">
-                                        {row.map(node => {
-                                            // console.log(node);
-                                            return (
-                                                <Node
-                                                    key={uuidv4()}
-                                                    row={node.row}
-                                                    col={node.col}
-                                                    visiting={node.visiting}
-                                                    path={node.path}
-                                                    bs={node.bs}
-                                                    power={node.power}
-                                                    handoff={node.handoff}
-                                                ></Node>
-                                            );
-                                        })}
-                                    </div>
-                                );
-                            })}
-                        </div>
-                        <div>
-                            {cars.map(car => {
-                                return (
-                                    <Line
-                                        key={uuidv4()}
-                                        row={car.row}
-                                        col={car.col}
-                                        bs={car.bs}
-                                        handoff={car.handoff}
-                                    ></Line>
-                                );
-                            })}
-                        </div>
-                        <div>
-                            {entrances.map(e => {
-                                let entering = -1;
-                                if (e.carenter === 0) entering = 0;
-                                else if (e.carenter === 1) entering = 1;
-                                e.carenter = -1;
-                                return (
-                                    <Entrance
-                                        key={uuidv4()}
-                                        row={e.row}
-                                        col={e.col}
-                                        dir={e.arrowdir}
-                                        enter={entering}
-                                    ></Entrance>
-                                );
-                            })}
-                        </div>
-                    </div>
-                </div>
-                <div className="datacontainer">
-                    <div className="datas">
-                        <Data type={"cars"} data={cars.length}></Data>
-                        <Data type={"handoffs"} data={plotdata.handoffs}></Data>
-                        <Data
-                            type={"power"}
-                            data={plotdata.averagepower}
-                        ></Data>
-                    </div>
-                </div>
+                <Simulation
+                    grid={grid}
+                    cars={cars}
+                    entrances={entrances}
+                ></Simulation>
             </div>
         );
     }
@@ -339,76 +277,16 @@ export default class Handoff extends Component {
                             <Icons></Icons>
                         </div>
                     </div>
-                    <div className="simcontainer">
-                        <div className="simulation">
-                            <div className="board">
-                                {grid.map(row => {
-                                    return (
-                                        <div key={uuidv4()} className="roww">
-                                            {row.map(node => {
-                                                // console.log(node);
-                                                return (
-                                                    <Node
-                                                        key={uuidv4()}
-                                                        row={node.row}
-                                                        col={node.col}
-                                                        visiting={node.visiting}
-                                                        path={node.path}
-                                                        bs={node.bs}
-                                                        power={node.power}
-                                                        handoff={node.handoff}
-                                                    ></Node>
-                                                );
-                                            })}
-                                        </div>
-                                    );
-                                })}
-                            </div>
-                            <div>
-                                {cars.map(car => {
-                                    return (
-                                        <Line
-                                            key={uuidv4()}
-                                            row={car.row}
-                                            col={car.col}
-                                            bs={car.bs}
-                                            handoff={car.handoff}
-                                        ></Line>
-                                    );
-                                })}
-                            </div>
-                            <div>
-                                {entrances.map(e => {
-                                    let entering = -1;
-                                    if (e.carenter === 0) entering = 0;
-                                    else if (e.carenter === 1) entering = 1;
-                                    e.carenter = -1;
-                                    return (
-                                        <Entrance
-                                            key={uuidv4()}
-                                            row={e.row}
-                                            col={e.col}
-                                            dir={e.arrowdir}
-                                            enter={entering}
-                                        ></Entrance>
-                                    );
-                                })}
-                            </div>
-                        </div>
-                    </div>
-                    <div className="datacontainer">
-                        <div className="datas">
-                            <Data type={"cars"} data={cars.length}></Data>
-                            <Data
-                                type={"handoffs"}
-                                data={plotdata.handoffs}
-                            ></Data>
-                            <Data
-                                type={"power"}
-                                data={plotdata.averagepower}
-                            ></Data>
-                        </div>
-                    </div>
+                    <Simulation
+                        grid={grid}
+                        cars={cars}
+                        entrances={entrances}
+                    ></Simulation>
+                    <Plots
+                        cars={cars.length}
+                        handoffs={plotdata.handoffs}
+                        power={plotdata.averagepower}
+                    ></Plots>
                 </div>
                 <div className="footer"></div>
             </div>

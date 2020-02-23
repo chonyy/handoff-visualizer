@@ -3,7 +3,7 @@
 </p>
 
 <p align=center>
-    <a target="_blank" href="https://travis-ci.com/chonyy/NCKU-Weather" title="Build Status"><img src="https://travis-ci.com/chonyy/NCKU-Weather.svg?branch=master"></a>
+    <a target="_blank" href="https://travis-ci.com/chonyy/handoff-visualizer" title="Build Status"><img src="https://travis-ci.com/chonyy/handoff-visualizer.svg?branch=master"></a>
     <a target="_blank" href="#" title="language count"><img src="https://img.shields.io/github/languages/count/chonyy/handoff-visualizer"></a>
     <a target="_blank" href="#" title="top language"><img src="https://img.shields.io/github/languages/top/chonyy/handoff-visualizer?color=orange"></a>
     <a target="_blank" href="http://nodejs.org/download/" title="Node version"><img src="https://img.shields.io/badge/node.js-%3E=_6.0-green.svg"></a>
