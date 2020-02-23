@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/handoff-visualizer/static/css/main.6091ceac.chunk.css",
-    "main.js": "/handoff-visualizer/static/js/main.f2f085b3.chunk.js",
-    "main.js.map": "/handoff-visualizer/static/js/main.f2f085b3.chunk.js.map",
+    "main.css": "/handoff-visualizer/static/css/main.80889840.chunk.css",
+    "main.js": "/handoff-visualizer/static/js/main.68b2bdaf.chunk.js",
+    "main.js.map": "/handoff-visualizer/static/js/main.68b2bdaf.chunk.js.map",
     "runtime-main.js": "/handoff-visualizer/static/js/runtime-main.384b9427.js",
     "runtime-main.js.map": "/handoff-visualizer/static/js/runtime-main.384b9427.js.map",
-    "static/js/2.1459bbbe.chunk.js": "/handoff-visualizer/static/js/2.1459bbbe.chunk.js",
-    "static/js/2.1459bbbe.chunk.js.map": "/handoff-visualizer/static/js/2.1459bbbe.chunk.js.map",
+    "static/js/2.9ff72c49.chunk.js": "/handoff-visualizer/static/js/2.9ff72c49.chunk.js",
+    "static/js/2.9ff72c49.chunk.js.map": "/handoff-visualizer/static/js/2.9ff72c49.chunk.js.map",
     "index.html": "/handoff-visualizer/index.html",
-    "precache-manifest.53b8712bc329519c65c98238701ba2ca.js": "/handoff-visualizer/precache-manifest.53b8712bc329519c65c98238701ba2ca.js",
+    "precache-manifest.495c05658d99b6667f1ab48fbc6066c1.js": "/handoff-visualizer/precache-manifest.495c05658d99b6667f1ab48fbc6066c1.js",
     "service-worker.js": "/handoff-visualizer/service-worker.js",
-    "static/css/main.6091ceac.chunk.css.map": "/handoff-visualizer/static/css/main.6091ceac.chunk.css.map",
-    "static/js/2.1459bbbe.chunk.js.LICENSE.txt": "/handoff-visualizer/static/js/2.1459bbbe.chunk.js.LICENSE.txt",
+    "static/css/main.80889840.chunk.css.map": "/handoff-visualizer/static/css/main.80889840.chunk.css.map",
+    "static/js/2.9ff72c49.chunk.js.LICENSE.txt": "/handoff-visualizer/static/js/2.9ff72c49.chunk.js.LICENSE.txt",
     "static/media/Entrance.css": "/handoff-visualizer/static/media/arrow2.5c36b00b.svg",
     "static/media/Icons.css": "/handoff-visualizer/static/media/bs.eeebed52.svg",
-    "static/media/Child.css": "/handoff-visualizer/static/media/handoff3.33aa5d42.svg"
+    "static/media/Node.css": "/handoff-visualizer/static/media/handoff3.33aa5d42.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.384b9427.js",
-    "static/js/2.1459bbbe.chunk.js",
-    "static/css/main.6091ceac.chunk.css",
-    "static/js/main.f2f085b3.chunk.js"
+    "static/js/2.9ff72c49.chunk.js",
+    "static/css/main.80889840.chunk.css",
+    "static/js/main.68b2bdaf.chunk.js"
   ]
 }
