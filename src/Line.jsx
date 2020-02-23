@@ -36,7 +36,7 @@ export default class Line extends Component {
         if (movingnode !== null && bs !== null) {
             linestyle = connect(bs, movingnode, "#ffc952", 5);
         }
-        if (handoff) {
+        if (handoff && movingnode !== null) {
             // console.log(row, col);
             handoffstyle = drawhandoff(movingnode);
         } else {

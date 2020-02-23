@@ -19,6 +19,7 @@ export default class Node extends Component {
             ? `${Math.sign(this.props.power) *
                   Math.round(Math.abs(this.props.power))}`
             : "";
+
         return (
             <div className={`node ${visitingclass}`} id={id}>
                 {value}
