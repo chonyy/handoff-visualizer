@@ -8,9 +8,9 @@ Play with it! https://chonyy.github.io/handoff-visualizer/
 
 ## Policies Pseudocode
 
-Power referred to **P**, base station referered to **B**.
+Received Power referred to **P**, base station referered to **B**.
 
-Threshold referred to **T**, Entrophy referred to **E**.
+Threshold referred to **T**, entrophy referred to **E**.
 
 ### Best Policy
 
@@ -53,10 +53,13 @@ if (Pnew < Pmin) {
 <p align=center>
     <img src="img/simulation structure.PNG">
 </p>
-Each block is composed of 24 nodes, which make the block size 120 * 80 (m^2). Cars are assummed to be moving on the line between blocks that doesn't take any space.
+Each node is a 20 * 20 (m^2) square. A block is composed of 24 nodes, whick makes the block size 120 * 80 (m^2). Cars are assummed to be moving on an extremely thin line between blocks, the line doesn't take up any space. The velocity of the car is 20m/s. This means, in our simultation, we iterate once in a second, and the cars moves one node, all the data are calculated every second.
 
+-   **Velocity** = 72km/hr = 20m/s
+-   **Probability of cars entrance** follows [Poisson distribution](https://en.wikipedia.org/wiki/Poisson_distribution)
 -   **⋋** = 1 cars/ min [ P(t) = ⋋"e" ^(−"⋋" ) (Hint: t is in sec) ]
--   **Velocity** = 72km/hr
+-   **Probability of cars turning** based on predefined value listed below
+-   **Received Power Calculation** explained below
 
 ### Car Entrance Distribution
 
@@ -76,7 +79,7 @@ The received power is calculated by the formula.
 -   10log(Pt/Base) = dBm
 -   First-meter path loss = 10 dBm
 -   **P0 = -50 dBm**
--   **Pd = -60 - 20log(d(m) / 1m)**
+-   **Pd = -50 - 10 - 20log(d(m) / 1m)**
 
 ## Demo Video
 
