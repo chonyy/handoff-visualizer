@@ -54,9 +54,3 @@ export default class Icons extends Component {
         );
     }
 }
-
-/* black arrow
-green arrow
-red arrow
-
-make img with ppt */

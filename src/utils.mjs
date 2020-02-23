@@ -172,7 +172,7 @@ export function removecars(cars, cartoremove, entrances) {
     for (let i = 0; i < cartoremove.length; i++) {
         let row = cartoremove[i].row;
         let col = cartoremove[i].col;
-        console.log(row, col);
+        // console.log(row, col);
         if (row === -1 && col === 7) entrances[0].carenter = 1;
         else if (row === -1 && col === 21) entrances[1].carenter = 1;
         else if (row === 21 && col === 7) entrances[2].carenter = 1;
@@ -219,8 +219,6 @@ export function checkBS(car, policy, plotdata) {
         }
     } else if (policy === 1) {
         if (pNew > pOld && pOld < t) {
-            console.log("new", pNew);
-            console.log("old", pOld);
             car.bs = newBS;
             car.power = pNew;
             handoff = true;
@@ -367,7 +365,6 @@ export function updateenter(entrances, cars) {
                     power: power(15, 0, bstation[2])
                 });
             }
-            // console.log("entering", newE[i]);
             newE[i].carenter = 0;
         }
     }

@@ -34,8 +34,6 @@ export default class Entrance extends Component {
                 : this.state.enter === 1
                 ? "leaving"
                 : "";
-        // console.log(this.state.enter);
-        // console.log(entrancestyle);
         return (
             <div
                 style={entrancestyle}

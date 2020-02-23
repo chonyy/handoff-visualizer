@@ -18,7 +18,6 @@ export default class Line extends Component {
         let bs = document.getElementById(`bs${basestaion}`);
         let linestyle = {};
         if (movingnode !== null && bs !== null) {
-            // console.log(movingnode, bs);
             linestyle = connect(bs, movingnode, "#ffc952", 5);
             this.setState({ linestyle: linestyle });
         }
@@ -37,7 +36,6 @@ export default class Line extends Component {
             linestyle = connect(bs, movingnode, "#ffc952", 5);
         }
         if (handoff && movingnode !== null) {
-            // console.log(row, col);
             handoffstyle = drawhandoff(movingnode);
         } else {
             handoffstyle = { display: "none" };
@@ -56,7 +54,6 @@ function drawhandoff(node) {
     var nodeOff = getOffset(node);
     var x = nodeOff.left - 0.7 * nodeOff.width;
     var y = nodeOff.top - 90;
-    // console.log(x, y);
     let handoffstyle = {
         padding: "0px",
         margin: "0px",
@@ -102,8 +99,6 @@ function connect(div1, div2, color, thickness) {
     };
 
     return linestyle;
-
-    // document.body.innerHTML += htmlLine;
 }
 
 function getOffset(el) {

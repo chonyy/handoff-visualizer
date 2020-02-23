@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import BootstrapNav from "./BootstrapNav";
+import BootstrapNav from "./Components/BootstrapNav";
 import "./Handoff.css";
-import BootstrapDrop from "./BootstrapDrop";
-import Icons from "./Icons";
-import Simulation from "./Simulation";
-import Plots from "./Plots";
-import { initgrid, move, carmoving, power, updateenter } from "./utils.mjs";
+import BootstrapDrop from "./Components/BootstrapDrop";
+import Icons from "./Components/Icons";
+import Simulation from "./Components/Simulation";
+import Plots from "./Components/Plots";
+import { initgrid, move, carmoving, power, updateenter } from "../utils.mjs";
 
 let policyobj = { policy: 0 };
 let plotdata = { handoffs: 0, averagepower: -103 };
@@ -176,7 +176,6 @@ export default class Handoff extends Component {
         } else {
             running = 1;
             window.intervalid = setInterval(() => {
-                console.log(running);
                 let newentrances = updateenter(
                     this.state.entrances,
                     this.state.cars

@@ -18,7 +18,6 @@ export default class Simulation extends Component {
                             return (
                                 <div key={uuidv4()} className="roww">
                                     {row.map(node => {
-                                        // console.log(node);
                                         return (
                                             <Node
                                                 key={uuidv4()}

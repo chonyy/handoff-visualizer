@@ -1,20 +1,20 @@
 .arrow0 {
-    background-image: url("arrow0.svg");
+    background-image: url("../img/arrow0.svg");
     background-size: cover;
 }
 
 .arrow1 {
-    background-image: url("arrow1.svg");
+    background-image: url("../img/arrow1.svg");
     background-size: cover;
 }
 
 .arrow2 {
-    background-image: url("arrow2.svg");
+    background-image: url("../img/arrow2.svg");
     background-size: cover;
 }
 
 .arrow3 {
-    background-image: url("arrow3.svg");
+    background-image: url("../img/arrow3.svg");
     background-size: cover;
 }
 
@@ -42,21 +42,18 @@
 
     25% {
         transform: scale(1.5);
-        filter: invert(23%) sepia(11%) saturate(4889%) hue-rotate(115deg)
-            brightness(95%) contrast(104%);
+        filter: invert(23%) sepia(11%) saturate(4889%) hue-rotate(115deg) brightness(95%) contrast(104%);
     }
 
     50% {
         transform: scale(2);
         border-radius: 100%;
-        filter: invert(44%) sepia(91%) saturate(3801%) hue-rotate(135deg)
-            brightness(92%) contrast(102%);
+        filter: invert(44%) sepia(91%) saturate(3801%) hue-rotate(135deg) brightness(92%) contrast(102%);
     }
 
     75% {
         transform: scale(1.5);
-        filter: invert(23%) sepia(11%) saturate(4889%) hue-rotate(115deg)
-            brightness(95%) contrast(104%);
+        filter: invert(23%) sepia(11%) saturate(4889%) hue-rotate(115deg) brightness(95%) contrast(104%);
     }
 
     100% {
@@ -84,21 +81,18 @@
 
     25% {
         transform: scale(1.5);
-        filter: invert(23%) sepia(11%) saturate(4889%) hue-rotate(115deg)
-            brightness(95%) contrast(104%);
+        filter: invert(23%) sepia(11%) saturate(4889%) hue-rotate(115deg) brightness(95%) contrast(104%);
     }
 
     50% {
         transform: scale(2);
         border-radius: 100%;
-        filter: invert(44%) sepia(91%) saturate(3801%) hue-rotate(135deg)
-            brightness(92%) contrast(102%);
+        filter: invert(44%) sepia(91%) saturate(3801%) hue-rotate(135deg) brightness(92%) contrast(102%);
     }
 
     75% {
         transform: scale(1.5);
-        filter: invert(23%) sepia(11%) saturate(4889%) hue-rotate(115deg)
-            brightness(95%) contrast(104%);
+        filter: invert(23%) sepia(11%) saturate(4889%) hue-rotate(115deg) brightness(95%) contrast(104%);
     }
 
     100% {
@@ -126,21 +120,18 @@
 
     25% {
         transform: scale(1.5) rotate(180deg);
-        filter: invert(12%) sepia(58%) saturate(4933%) hue-rotate(350deg)
-            brightness(80%) contrast(87%);
+        filter: invert(12%) sepia(58%) saturate(4933%) hue-rotate(350deg) brightness(80%) contrast(87%);
     }
 
     50% {
         transform: scale(2) rotate(180deg);
         border-radius: 100%;
-        filter: invert(18%) sepia(75%) saturate(1692%) hue-rotate(335deg)
-            brightness(120%) contrast(98%);
+        filter: invert(18%) sepia(75%) saturate(1692%) hue-rotate(335deg) brightness(120%) contrast(98%);
     }
 
     75% {
         transform: scale(1.5) rotate(180deg);
-        filter: invert(12%) sepia(58%) saturate(4933%) hue-rotate(350deg)
-            brightness(80%) contrast(87%);
+        filter: invert(12%) sepia(58%) saturate(4933%) hue-rotate(350deg) brightness(80%) contrast(87%);
     }
 
     100% {

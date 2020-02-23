@@ -4,14 +4,11 @@
     justify-content: center;
     align-items: center;
     margin-top: 1.2vw;
-    /* width: 100%; */
-    /* background-color: #fff; */
 }
 
 .icon-row {
     display: flex;
     flex-direction: row;
-    /* justify-content: space-evenly; */
     margin: 5px;
     width: 100%;
 }
@@ -32,13 +29,12 @@
 }
 
 .bs {
-    background-image: url(bs.svg);
+    background-image: url(../img/bs.svg);
     background-color: #ffc952;
     background-size: cover;
 }
 
 .first {
-    /* margin-left: 2vw; */
     width: 1.85vw;
     height: 1.85vw;
 }
@@ -48,8 +44,6 @@
 }
 
 .third {
-    /* margin-left: 0.5vw; */
-    /* background-color: #fff; */
     font-weight: bold;
     font-size: 0.8vw;
     text-align: center;
@@ -72,19 +66,17 @@
 
 .entrancee {
     background-size: cover;
-    background-image: url(arrow1.svg);
+    background-image: url(../img/arrow1.svg);
 }
 
 .enteringg {
     background-size: cover;
-    background-image: url(arrow1.svg);
-    filter: invert(44%) sepia(91%) saturate(3801%) hue-rotate(135deg)
-        brightness(92%) contrast(102%);
+    background-image: url(../img/arrow1.svg);
+    filter: invert(44%) sepia(91%) saturate(3801%) hue-rotate(135deg) brightness(92%) contrast(102%);
 }
 
 .leavingg {
     background-size: cover;
-    background-image: url(arrow3.svg);
-    filter: invert(18%) sepia(75%) saturate(1692%) hue-rotate(335deg)
-        brightness(120%) contrast(98%);
+    background-image: url(../img/arrow3.svg);
+    filter: invert(18%) sepia(75%) saturate(1692%) hue-rotate(335deg) brightness(120%) contrast(98%);
 }
