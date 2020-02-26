@@ -1,25 +1,24 @@
 {
   "files": {
-    "main.css": "/handoff-visualizer/static/css/main.80889840.chunk.css",
-    "main.js": "/handoff-visualizer/static/js/main.68b2bdaf.chunk.js",
-    "main.js.map": "/handoff-visualizer/static/js/main.68b2bdaf.chunk.js.map",
+    "main.css": "/handoff-visualizer/static/css/main.bdba76ef.chunk.css",
+    "main.js": "/handoff-visualizer/static/js/main.34c87292.chunk.js",
+    "main.js.map": "/handoff-visualizer/static/js/main.34c87292.chunk.js.map",
     "runtime-main.js": "/handoff-visualizer/static/js/runtime-main.384b9427.js",
     "runtime-main.js.map": "/handoff-visualizer/static/js/runtime-main.384b9427.js.map",
-    "static/js/2.9ff72c49.chunk.js": "/handoff-visualizer/static/js/2.9ff72c49.chunk.js",
-    "static/js/2.9ff72c49.chunk.js.map": "/handoff-visualizer/static/js/2.9ff72c49.chunk.js.map",
+    "static/js/2.41355a78.chunk.js": "/handoff-visualizer/static/js/2.41355a78.chunk.js",
+    "static/js/2.41355a78.chunk.js.map": "/handoff-visualizer/static/js/2.41355a78.chunk.js.map",
     "index.html": "/handoff-visualizer/index.html",
-    "precache-manifest.495c05658d99b6667f1ab48fbc6066c1.js": "/handoff-visualizer/precache-manifest.495c05658d99b6667f1ab48fbc6066c1.js",
+    "precache-manifest.7d9a404b2b49d8d1a1e8101e789796fb.js": "/handoff-visualizer/precache-manifest.7d9a404b2b49d8d1a1e8101e789796fb.js",
     "service-worker.js": "/handoff-visualizer/service-worker.js",
-    "static/css/main.80889840.chunk.css.map": "/handoff-visualizer/static/css/main.80889840.chunk.css.map",
-    "static/js/2.9ff72c49.chunk.js.LICENSE.txt": "/handoff-visualizer/static/js/2.9ff72c49.chunk.js.LICENSE.txt",
-    "static/media/Entrance.css": "/handoff-visualizer/static/media/arrow2.5c36b00b.svg",
-    "static/media/Icons.css": "/handoff-visualizer/static/media/bs.eeebed52.svg",
+    "static/css/main.bdba76ef.chunk.css.map": "/handoff-visualizer/static/css/main.bdba76ef.chunk.css.map",
+    "static/js/2.41355a78.chunk.js.LICENSE.txt": "/handoff-visualizer/static/js/2.41355a78.chunk.js.LICENSE.txt",
+    "static/media/Entrance.css": "/handoff-visualizer/static/media/arrow3.201a977c.svg",
     "static/media/Node.css": "/handoff-visualizer/static/media/handoff3.33aa5d42.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.384b9427.js",
-    "static/js/2.9ff72c49.chunk.js",
-    "static/css/main.80889840.chunk.css",
-    "static/js/main.68b2bdaf.chunk.js"
+    "static/js/2.41355a78.chunk.js",
+    "static/css/main.bdba76ef.chunk.css",
+    "static/js/main.34c87292.chunk.js"
   ]
 }
