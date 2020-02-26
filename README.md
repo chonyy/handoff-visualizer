@@ -16,6 +16,10 @@
 
 Play with it! https://chonyy.github.io/handoff-visualizer/
 
+This project is to **visualize** handoff and make the concept of handoff in wireless network easy to understand. **Different policies** are implemented to perform the handoff at different situations. The goal is to make the users try out all the different policies, understand the differences, and find out the most efficient policy.
+
+If your are interested in this visualiztion, please also check out the [handoff-simulator](https://github.com/chonyy/handoff-simulator). We value the understanding in this visualizer project, and we **value the data** in that [handoff-simulator](https://github.com/chonyy/handoff-simulator).
+
 ## Policies Pseudocode
 
 Received Power referred to **P**, base station referered to **B**.
@@ -100,13 +104,14 @@ alt="IMAGE ALT TEXT HERE" width="480" height="360" /></a>
 </p>
 
 ## What is handoff?
+
 <p align=center>
     <img src="img/handoff.PNG" width="636" height="391">
 </p>
 
 [Handoff](https://searchmobilecomputing.techtarget.com/definition/handoff) is the **transition** for any given user of signal transmission from one base station to a geographically adjacent base station as the user **moves around**.
 
-Each time a mobile or portable cellular subscriber passes from one cellinto another, the network automatically *switches* coverage responsibility from one basestation to another.  Each base-station transition, as well as the switching processor sequence itself, is called handoff.
+Each time a mobile or portable cellular subscriber passes from one cellinto another, the network automatically _switches_ coverage responsibility from one basestation to another. Each base-station transition, as well as the switching processor sequence itself, is called handoff.
 
 ## Policies parameter value
 
