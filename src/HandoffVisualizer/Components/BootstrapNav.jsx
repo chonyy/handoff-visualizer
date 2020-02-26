@@ -45,6 +45,12 @@ export default class BootstrapNav extends Component {
                             >
                                 Creator
                             </Nav.Link>
+                            <Nav.Link
+                                href="https://github.com/chonyy/handoff-simulator"
+                                className="navbarlinks"
+                            >
+                                Simulation
+                            </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
