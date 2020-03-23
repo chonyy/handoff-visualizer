@@ -12,7 +12,7 @@
     <a target="_blank" href="http://makeapullrequest.com" title="PRs Welcome"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"></a>
 </p>
 
-> 📶 Visualizer to simplify the concept of handoff in Wireless Network Communication.
+> 📶 Visualizing the transmission between users and base stations!
 
 Play with it! https://chonyy.github.io/handoff-visualizer/
 
