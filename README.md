@@ -12,7 +12,7 @@
     <a target="_blank" href="http://makeapullrequest.com" title="PRs Welcome"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"></a>
 </p>
 
-> 📶 Wiresless network handoff simulator built with react.js!
+> 📶 Visualizer to simplify the concept of handoff in Wireless Network Communication.
 
 Play with it! https://chonyy.github.io/handoff-visualizer/
 
